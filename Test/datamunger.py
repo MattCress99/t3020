@@ -17,7 +17,7 @@ origin=sys.argv[1]
 
 def calc_total(curr):
     computed=0
-    for c in curr[2:9]: #E1 
+    for c in curr[1:9]: #E1 
         computed=computed+c
     return computed
 
@@ -25,8 +25,8 @@ def calc_total(curr):
 def check_monotonic(prev,curr):
    # Now check monotonicity and update  prev so next time round we compare
    # against this row
-    for i in range(9):
-        if curr[i] <=  prev[i]:  #E2 
+    for i in range(8):
+        if curr[i] <  prev[i]:  #E2 
 
             print("Monotonic error at column %d comparing lines %d and %d  "%(i,n-1,n),
                      "values %d and %d"%(curr[i],prev[i]))
@@ -36,16 +36,20 @@ def check_monotonic(prev,curr):
 def check_row(n, prev, curr_str):
     data = []
     curr = []
+    Temp = 0
     for d in curr_str: #E3
-        try:
-            v = int(d)
-            curr.append(v)
-        except ValueError:  # missing data so can't convert
-            return False
+        Temp=Temp+1
+        if Temp != 10:
+            try:
+                v = int(d)
+                curr.append(v)
+            except ValueError:  # missing data so can't convert
+                return False
     computed = calc_total(curr)
     if computed != curr[0]:
         print("Sum error at line ",n, curr_str,
               "computed %d and expected %d"%(computed, curr[0]))
+    
     check_monotonic(prev, curr)
     return True # if there all data was there
 

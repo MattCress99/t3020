@@ -21,8 +21,21 @@ Note, however, there is some missing data in some of the rows. The first few lin
 
 There are three deliberate errors, marked E1, E2 and E3. Finding other (non-deliberate and unknown to me)  errors will get a bonus -- clearly add below this line in your copy of the README what the errors are and how you fixed them.
 
-#The file structure has been organised into a program directory and Test directory.
-#The datamunger directory will contain an __init__.py file so that it can pull data from other directories, it will also have the code to the program.
-#The Test file with have an __init__.py file, the sample data and the unit testing code. 
+-All Changes made to the program
+
+*The file structure has been organised into a program directory and Test directory.
+*The datamunger directory will contain an __init__.py file so that it can pull data from other directories, it will also have the code to the program.
+*The Test file with have an __init__.py file, the sample data and the unit testing code. 
+
+E1 
+*the curr[2:9] had to be changed to curr[1:9] as the algorithm was not reading all the columns in the data.
+
+
+E2 
+*Changed the value in for i in range(9) to for i in range(8) as we did not want the last column to be included in the monotonic check.
+*Monotomically means that the current number must be smaller than the previous number, the code wrote if curr[i] <= prev[i] which is incorrect as <= is inclusive where as monotomically is not inclusive. Therefore it should only have been < (less than) not <= (less than or equals to).
+
+E3 
+*Added an if statement so that the last column is not checked in the check_row check search.
 
 
