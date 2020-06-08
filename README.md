@@ -1,9 +1,9 @@
 
 # T3020   Repo for ELEN3020
 
-Name: Scott Hazelhurst
+Name: Matthew Cresswell
+Student Number: 1834243
 Date: 7 June
-
 
 # Description of code -- for question 1.1 and 1.2
 
@@ -20,3 +20,9 @@ Note, however, there is some missing data in some of the rows. The first few lin
 ### Errors
 
 There are three deliberate errors, marked E1, E2 and E3. Finding other (non-deliberate and unknown to me)  errors will get a bonus -- clearly add below this line in your copy of the README what the errors are and how you fixed them.
+
+#The file structure has been organised into a program directory and Test directory.
+#The datamunger directory will contain an __init__.py file so that it can pull data from other directories, it will also have the code to the program.
+#The Test file with have an __init__.py file, the sample data and the unit testing code. 
+
+
