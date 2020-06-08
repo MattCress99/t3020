@@ -4,7 +4,7 @@
 Name: Matthew Cresswell
 Student Number: 1834243
 Date: 7 June
-
+Scott
 # Description of code -- for question 1.1 and 1.2
 
 The program `datamunger.py` is used to quality check data files. A
