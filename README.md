@@ -21,7 +21,10 @@ Note, however, there is some missing data in some of the rows. The first few lin
 
 There are three deliberate errors, marked E1, E2 and E3. Finding other (non-deliberate and unknown to me)  errors will get a bonus -- clearly add below this line in your copy of the README what the errors are and how you fixed them.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Dev
 -All Changes made to the program
 
 *The file structure has been organised into a program directory and Test directory.
@@ -38,6 +41,9 @@ E2
 
 E3 
 *Added an if statement so that the last column is not checked in the check_row check search.
+<<<<<<< HEAD
 
+=======
+>>>>>>> Dev
 
 
